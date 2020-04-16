@@ -20,8 +20,8 @@ def consolidate_cart(cart)
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
 item_check = nil
-
 new_cart=[]
+
   cart.each do |item|
     item_check = find_item_by_name_in_collection(item, new_cart)
     if item_check == nil
@@ -31,7 +31,7 @@ new_cart=[]
       new_item = item_check
       new_item[:count] += 1
     end
-    new_array << new_item
+    new_cart << new_item
   end
 end
 
