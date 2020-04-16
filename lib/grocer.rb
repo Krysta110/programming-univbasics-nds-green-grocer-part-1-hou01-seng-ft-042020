@@ -3,7 +3,9 @@ def find_item_by_name_in_collection(name, collection)
   #
   # Consult README for inputs and outputs
   found_item = nil
-
+  collection.each do |count|
+    if count[:item] == name
+      found_item = count
 
 end
 
