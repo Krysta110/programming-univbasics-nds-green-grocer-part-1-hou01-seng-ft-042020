@@ -23,7 +23,7 @@ item_check = nil
 new_cart=[]
 
   cart.each do |item|
-    item_check = find_item_by_name_in_collection(item, new_cart)
+    item_check = find_item_by_name_in_collection(item[:item], new_cart)
     if item_check == nil
       new_item = item
       new_item[:count] = 1
