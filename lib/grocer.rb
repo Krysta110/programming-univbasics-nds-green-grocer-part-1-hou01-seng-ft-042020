@@ -39,8 +39,8 @@ end
 
 
 
-# 
-# 
+#
+#
 #   new_cart=[] #my new, consolidated cart
 #   cart.each do |item_full| #checks thru each item of the incoming cart
 #     binding.pry
