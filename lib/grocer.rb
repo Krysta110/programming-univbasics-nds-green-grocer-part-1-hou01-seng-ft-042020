@@ -17,10 +17,10 @@ def consolidate_cart(cart)
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
 
-  new_cart=[]
-  cart.each do |item|
-    item_hash = {}
-    item_in_cart = "no"
+  new_cart=[] #my new, consolidated cart
+  cart.each do |item| #checks thru each item of the incoming cart
+    item_hash = {}  # reset a temp hash each time thru
+    item_in_cart = "no" #reset thie variable each time thru
     new_cart.each do |item_check|
       if item == item_check[:item]
         item_check[:count] += 1
