@@ -32,6 +32,8 @@ new_cart=[]
         new_cart.each do |info|
           if info[:item] == item_check[:item]
             info[:count] += 1
+          end
+        end
       # new_item = item_check
       # new_item[:count] += 1
     end
