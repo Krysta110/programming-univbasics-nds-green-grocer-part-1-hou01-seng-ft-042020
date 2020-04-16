@@ -27,9 +27,8 @@ def consolidate_cart(cart)
         item_in_cart = "yes"
       end
     if item_in_cart == "no"
-
-    end
     item_hash = find_item_by_name_in_collection(item)
+    item_hash[:count] = 1
     #
     # item_hash
     # new_cart << item_hash
