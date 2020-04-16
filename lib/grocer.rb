@@ -34,10 +34,7 @@ new_cart=[]
             info[:count] += 1
           end
         end
-      # new_item = item_check
-      # new_item[:count] += 1
     end
-
   end
 end
 
