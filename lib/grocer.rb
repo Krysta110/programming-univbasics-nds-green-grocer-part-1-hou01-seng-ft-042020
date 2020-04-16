@@ -20,15 +20,20 @@ def consolidate_cart(cart)
   new_cart=[]
   new_item = {}
   cart.each do |item|
+    item_hash = {}
     item_in_cart = "no"
     new_cart.each do |item_check|
       if item == item_check[:item]
         item_check[:count] += 1
         item_in_cart = "yes"
       end
-    if item_in_cart == "no"
-    item_hash = find_item_by_name_in_collection(item)
-    item_hash[:count] = 1
+      if item_in_cart == "no"
+        item_hash = find_item_by_name_in_collection(item)
+        item_hash[:count] = 1
+        new_cart << item_hash
+      end
+    end
+  end
     #
     # item_hash
     # new_cart << item_hash
