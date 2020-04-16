@@ -24,12 +24,12 @@ def consolidate_cart(cart)
       if item == item_check[:item]
         item_check[:count] += 1
       end
-    end    
+    end
     item_hash = find_item_by_name_in_collection(item)
     #     
     # item_hash
     # new_cart << item_hash
-    # 
-    # 
+    #
+    #
 
 end
