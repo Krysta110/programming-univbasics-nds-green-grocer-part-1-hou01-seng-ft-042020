@@ -25,9 +25,9 @@ new_cart=[]
   cart.each do |item|
     item_check = find_item_by_name_in_collection(item, new_cart)
     if item_check == nil
-
       new_item = item
       new_item[:count] = 1
+      new_cart << new_item
     else
         new_cart.each do |info|
           if info[:item] == item_check[:item]
@@ -37,7 +37,7 @@ new_cart=[]
       # new_item = item_check
       # new_item[:count] += 1
     end
-    new_cart << new_item
+
   end
 end
 
