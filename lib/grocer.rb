@@ -19,15 +19,33 @@ def consolidate_cart(cart)
   #
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
+item_check = nil
+
+new_cart=[]
+  cart.each do |item|
+    item_check = find_item_by_name_in_collection(item, new_cart)
+    if item_check == nil
+      new_item = item
+      new_item[:count] = 1
+    else
+      new_item = item_check
+      new_item[:count] += 1
+    end
+    new_array << new_item
+      
+
+
+
+
 
   new_cart=[] #my new, consolidated cart
-  cart.each do |item| #checks thru each item of the incoming cart
+  cart.each do |item_full| #checks thru each item of the incoming cart
     binding.pry
     item_hash = {}  # reset a temp hash each time thru
     item_in_cart = "no" #reset thie variable each time thru
     new_cart.each do |item_check| #checks thru the new_cart to see if item already exists
       binding.pry
-      if item == item_check[:item]  #checks if the item from cart is already in new cart
+      if item_full[:item] == item_check[:item]  #checks if the item from cart is already in new cart
         item_check[:count] += 1 #if yes, we had a count of +1
         item_in_cart = "yes"
         binding.pry
