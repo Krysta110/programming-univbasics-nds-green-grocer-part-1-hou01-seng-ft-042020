@@ -6,7 +6,9 @@ def find_item_by_name_in_collection(name, collection)
   collection.each do |count|
     if count[:item] == name
       found_item = count
-
+    end
+  end
+  return found_item
 end
 
 def consolidate_cart(cart)
